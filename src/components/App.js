@@ -1,12 +1,10 @@
 import React, { Component } from 'react';
-
+import AddToDo from '../containers/AddTodo';
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <p>
-          Hello World!
-        </p>
+        <AddToDo />
       </div>
     );
   }
