@@ -25,7 +25,7 @@ class AddToDo extends Component {
       <div>
         <form onSubmit={this.handleSubmit}>
           <input type="text" value={this.state.value} onChange={this.handleOnChange}/>
-          <button type="submit">Add</button>
+          <button type="submit" className="btn btn-default">Add</button>
         </form>
       </div>
     )

@@ -1,8 +1,6 @@
-import { ADD_TODO } from '../actions/index';
 function todoApp(state = [], action) {
-  console.log(action);
   switch (action.type) {
-    case ADD_TODO:
+    case 'ADD_TODO':
       return [
         ...state,
         {
@@ -11,6 +9,12 @@ function todoApp(state = [], action) {
           completed: false
         }
       ];
+    case 'TOGGLE_TODO':
+      return state.map(todo => 
+        (todo.id === action.id)
+          ? {...todo, completed: !todo.completed} 
+          : todo
+      ) 
     default:
       return state;
   }
